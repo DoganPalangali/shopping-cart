@@ -13,11 +13,14 @@ function ProductData() {
     //     setData(items);
     //   });
 
+    // datanın fetchlenmesi;
+
     const getData = async () => {
       const data = await fetch("https://dummyjson.com/products");
-      const jsonData = await data.json();
-      setData(jsonData.products);
+      const dummyData = await data.json();
+      setData(dummyData.products);
       console.log("xdd");
+      console.log("dummyData = ", dummyData);
     };
 
     getData();
@@ -28,7 +31,7 @@ function ProductData() {
   return (
     <div>
       {data.map((item) => (
-        <Card item={item} />
+        <Card item={item} key={item.id} />
       ))}
     </div>
   );
