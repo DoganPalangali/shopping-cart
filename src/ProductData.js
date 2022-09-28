@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
+import "./components/Product.css";
 
 function ProductData() {
   const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ function ProductData() {
   console.log(data);
 
   return (
-    <div>
+    <div className="cart-container">
       {data.map((item) => (
         <Card item={item} key={item.id} />
       ))}
