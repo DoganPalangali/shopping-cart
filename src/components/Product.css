@@ -7,3 +7,27 @@
   grid-template-rows: auto;
   gap: 100px;
 }
+
+.shopping-cart {
+  position: sticky;
+  top: 0;
+  
+  
+}
+
+.cart-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.cart-button:hover {
+  background: #f00808;
+  background-image: -webkit-linear-gradient(top, #f00808, #010305);
+  background-image: -moz-linear-gradient(top, #f00808, #010305);
+  background-image: -ms-linear-gradient(top, #f00808, #010305);
+  background-image: -o-linear-gradient(top, #f00808, #010305);
+  background-image: linear-gradient(to bottom, #f00808, #010305);
+  text-decoration: none;
+}
