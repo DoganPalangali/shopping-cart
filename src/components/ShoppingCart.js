@@ -5,20 +5,26 @@ const ShoppingCart = ({ cartItem }) => {
   //   const { title, price, thumbnail } = shoppingItem;
   return (
     <div className="cart-container">
-      {cartItem.map((item) => (
-        <div className="item-container" key={item.id}>
-          <img className="cart-image" src={item.thumbnail} alt={item.title} />
-          <p>{item.title}</p>
+      {cartItem.length !== 0
+        ? cartItem.map((item) => (
+            <div className="item-container" key={item.id}>
+              <img
+                className="cart-image"
+                src={item.thumbnail}
+                alt={item.title}
+              />
+              <p>{item.title}</p>
 
-          <p>{item.price}$</p>
-        </div>
-      ))}
+              <p>{item.price}$</p>
+            </div>
+          ))
+        : "Sepetiniz Boş"}
 
       <hr />
 
-      <div className="total">
+      {/* <div className="total">
         <p>Total:</p>
-      </div>
+      </div> */}
     </div>
   );
 };
