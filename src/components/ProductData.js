@@ -23,11 +23,9 @@ function ProductData() {
 
   const handleClick = (item) => {
     cartItem.push(item);
-    console.log(cartItem);
   };
   const handleShow = () => {
     setShow((setShow) => !show);
-    console.log(show);
   };
   return (
     <div>

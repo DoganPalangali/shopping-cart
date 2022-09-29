@@ -1,8 +1,7 @@
 import React from "react";
 import "./ShoppingCart.css";
 
-const ShoppingCart = ({ cartItem }) => {
-  //   const { title, price, thumbnail } = shoppingItem;
+const ShoppingCart = ({ cartItem, setCartItem }) => {
   return (
     <div className="cart-container">
       {cartItem.length !== 0
@@ -21,10 +20,6 @@ const ShoppingCart = ({ cartItem }) => {
         : "Sepetiniz Boş"}
 
       <hr />
-
-      {/* <div className="total">
-        <p>Total:</p>
-      </div> */}
     </div>
   );
 };
