@@ -8,28 +8,14 @@ function ProductData() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // fetch("https://dummyjson.com/products")
-    //   .then((res) => res.json())
-
-    //   .then((itemData) => {
-    //     const items = itemData.products;
-    //     setData(items);
-    //   });
-
-    // datanın fetchlenmesi;
-
     const getData = async () => {
       const data = await fetch("https://dummyjson.com/products");
       const dummyData = await data.json();
       setData(dummyData.products);
-      console.log("xdd");
-      console.log("dummyData = ", dummyData);
     };
 
     getData();
   }, []);
-
-  console.log(data);
 
   const [cartItem, setCartItem] = useState([]);
 
@@ -46,13 +32,14 @@ function ProductData() {
   return (
     <div>
       <div className="shopping-cart">
-        <button onClick={handleShow} className="cart-button">
+        <button onClick={handleShow} className="card-button">
           <BsCart />
         </button>
-        {show ? <ShoppingCart /> : ""}
+
+        {show ? <ShoppingCart cartItem={cartItem} /> : ""}
       </div>
 
-      <div className="cart-container">
+      <div className="product-container">
         {data.map((item) => (
           <Card item={item} key={item.id} handleClick={handleClick} />
         ))}

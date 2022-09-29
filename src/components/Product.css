@@ -1,4 +1,4 @@
-.cart-container {
+.product-container {
     width: 80%;
   margin: auto;
   margin-top: 5%;
@@ -9,20 +9,21 @@
 }
 
 .shopping-cart {
-  position: sticky;
-  top: 0;
+  display: grid;
+  
+  justify-content: end;
   
   
 }
 
-.cart-button {
+.card-button {
   width: 50px;
   height: 50px;
   border-radius: 100%;
   cursor: pointer;
 }
 
-.cart-button:hover {
+.card-button:hover {
   background: #f00808;
   background-image: -webkit-linear-gradient(top, #f00808, #010305);
   background-image: -moz-linear-gradient(top, #f00808, #010305);

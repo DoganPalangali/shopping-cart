@@ -1,0 +1,26 @@
+.cart-container {
+    background-color: aqua;
+}
+
+
+.item-container {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  
+}
+
+.cart-image {
+    width: 75px;
+    height: auto;
+}
+
+.total {
+    margin: 10px 0 ;
+}
