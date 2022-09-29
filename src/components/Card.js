@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Card.css";
 
-const Card = ({ item }) => {
+const Card = ({ item, handleClick }) => {
   const { title, price, thumbnail } = item;
 
   return (
@@ -12,7 +12,7 @@ const Card = ({ item }) => {
 
       <p>{price}$</p>
 
-      <button>Add to cart</button>
+      <button onClick={() => handleClick(item)}>Add to cart</button>
     </div>
   );
 };

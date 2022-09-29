@@ -1,13 +1,10 @@
-
-import './App.css';
-import ProductData from './ProductData';
+import "./App.css";
+import ProductData from "./components/ProductData";
 
 function App() {
   return (
     <div className="App">
-       
-        <ProductData/>
-       
+      <ProductData />
     </div>
   );
 }

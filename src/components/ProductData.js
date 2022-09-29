@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Card from "./components/Card";
-import "./components/Product.css";
+import Card from "./Card";
+import "./Product.css";
+import ShoppingCart from "./ShoppingCart";
 
 function ProductData() {
   const [data, setData] = useState([]);
@@ -29,11 +30,24 @@ function ProductData() {
 
   console.log(data);
 
+  const [cartItem, setCartItem] = useState([]);
+
+  const handleClick = (item) => {
+    cartItem.push(item);
+    console.log(cartItem);
+  };
+
   return (
-    <div className="cart-container">
-      {data.map((item) => (
-        <Card item={item} key={item.id} />
-      ))}
+    <div>
+      <div className="Shopping-Cart">
+        <ShoppingCart />
+      </div>
+
+      <div className="cart-container">
+        {data.map((item) => (
+          <Card item={item} key={item.id} handleClick={handleClick} />
+        ))}
+      </div>
     </div>
   );
 }
